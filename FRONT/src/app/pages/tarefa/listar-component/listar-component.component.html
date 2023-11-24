@@ -1,0 +1,19 @@
+<h1>Listagem de produtos</h1>
+
+<table id="table">
+  <tr>
+    <th>#</th>
+    <th>Titulo</th>
+    <th>Descrição</th>
+    <th>Status</th>
+    <th>Categoria</th>
+  </tr>
+  <tr *ngFor="let t of tarefas">
+    <td>{{ t.TarefaId }}</td>
+    <td>{{ t.Titulo }}</td>
+    <td>{{ t.Descricao }}</td>
+    <td>{{ t.Status }}</td>
+    <td>{{ t.Categoria?.Nome }}</td>
+    <button (click)="alterar(t.TarefaId)"> Alterar </button>
+  </tr>
+</table>
